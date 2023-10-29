@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two unequal columns that floats next to each other */
+    .column {
+        float: left;
+        padding: 10px;
+    }
+
+    .left {
+        width: 35%;
+    }
+
+    .right {
+        width: 65%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    body {
+        margin: 0 0 0 0;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+
+    .selected {
+        color: Black;
+    }
+
+/*makes all underline
+    nav ol li > :nth-child(5) {
+        margin: 0 0 0 0;
+        list-style: none;
+        display: inline-flex;
+        margin-right: 10px; 
+        color: rgb(56, 10, 195);
+        flex-flow: column nowrap;
+        text-decoration-thickness: 2px;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    } */
+
+    nav ul li, a:link {
+        margin: 0 0 0 0;
+        list-style: none;
+        display: inline-flex;
+        margin-right: 10px; 
+        color: rgb(56, 10, 195);
+        flex-flow: column nowrap;
+    }
+
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
+
+    .shiftright {
+        text-align: right;
+        display: inline;
+        margin-left: 880px;
+    }
+
+    main {
+        background-color: rgb(185, 187, 207);
+        padding: 20px;
+        height: 1000px;
+        min-height: 100%;
+    }
+
+    .mainmenu {
+        width: 300px;
+        height: 900px;
+        margin-left: 140px;
+        margin-top: 40px;
+        display: flex;
+        flex-flow: column nowrap;
+        position: left;
+        padding: .5rem;
+        border-radius: 20px;
+        border-color: darkgray;
+        background-color: rgb(255, 255, 255);
+    }
+
+    h1 {
+        font-size:20;
+        color: black;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+        display: inline-flex;
+    }
+
+    nav ol li {
+        margin: 0 0 0 0;
+        list-style: none;
+        margin-left: 25px; 
+        color: rgb(56, 10, 195);
+        flex-flow: column wrap;
+        background-color: white;
+    }
+
+    .form {
+        margin-left: 150px;
+        margin-top: 50px;
+        display: flex;
+        flex-flow: row nowrap;
+        position: right;
+        padding: .5rem;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .container {
+        padding: 2rem;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        position: right;
+        width: 800px;
+        height: 900px;
+        margin-top: 40px;
+        border-color: darkgray;
+        border-width: 1px;
+    }
+
+    .field > input [type="text"], [type="number"], [type="password"], [type="date"], [type="email"] {
+        border: 1px solid skyblue;
+        border-radius: 4px;
+        min-width: fit-content;
+    }
+
+    .name {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 750px;
+    }
+
+    .username {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    input[id=name] {
+        width: 95%;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    input[id=username] {
+        width: 95%;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 5px;
+        border-color: greenyellow;
+    }
+
+    .status {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    input[id=yes] {
+        color: rgb(98, 98, 98);
+        padding-right: 20px;
+        font-size: 20px;
+    }
+
+    .email {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    input[id=email] {
+        width: 95%;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 5px;
+        border-color: red;
+    }
+
+    .textarea {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    input[id=textarea] {
+        width: 95%;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .buttons {
+        display: inline;
+        width: 600px;
+    }
+
+    .submit {
+        top:50%;
+        background-color:#1717b0;
+        color: #fff;
+        border:none; 
+        border-radius:5px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 75px;
+        margin-right: 20px;
+    }
+
+    .reset {
+        top:50%;
+        background-color:rgb(246, 65, 65);
+        color: #fff;
+        border:none; 
+        border-radius:5px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 75px;
+        margin-right: 20px;
+    }
+
+    .cancel {
+        top:50%;
+        background-color: lightgray;
+        color: #1717b0;
+        border:none; 
+        border-radius:5px; 
+        padding:15px;
+        min-height:30px; 
+        min-width: 75px;
+    }
+
+    footer { 
+        bottom: 1; 
+        left: 0;
+        z-index: 10;
+        background-color: black;
+        color: rgb(177, 132, 250);
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
+
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="color: black"><b>Calvin Grover</b></li>
+            <li><a href= "Home">Home</a></li>
+            <li><a href="Products">Products<a><li>
+            <li><a href= "Services">Services</a></li>
+            <li><a href= "Contact Us">Contact Us</a></li>
+            <div class="shiftright">
+            <li><b><a href= "Sign In">Sign In</a></b></li>
+            <li><b><a href= "Sign Up">Sign Up</a></b></li>
+        </div>
+        </ul>
+    </nav>
+    <main>
+        <div class="row">
+            <div class="column left">
+                <div class="mainmenu">
+                    <nav> 
+                        <ol>
+                            <h1><b>Main Menu</b></h1>
+                            <li><a href= "Home">Home</a></li>
+                            <li><a href="Products">Products<a><li>
+                            <li><a href= "Services">Services</a></li>
+                            <li><a href= "Contact Us">Contact Us</a></li>
+                        </ol>
+                    </nav>
+                    <nav>
+                        <h1 style="margin-left: 35px;"><b>Featured Projects</b></h1>
+                        <ol>
+                            <li><a href="Project A">Project A</a></li>
+                            <li><a href="Project B">Project B</a></li>
+                            <li><a href="Project C">Project C</a></li>
+                            <li><a href="Project D">Project D</a></li>
+                            <li><a href="Project F">Project F</a></li>
+                            <li><a href="Project G">Project G</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="container">
+                    <form action="" method="post">
+                        <h1 style="margin-left: 50px;">Contact Us Form</h1>
+                        <hr style="color: blue; width: 90%;">
+                        <br>
+                        <div class="name">
+                            <label for="name"><b>Name</b></label>
+                            <br>
+                            <input type="text" id="name" name="name" placeholder="Type name here..." required>
+                        </div>
+                        <br>
+                        <div class="username">
+                            <label for="username"><b>Username</b></label>
+                            <br>
+                            <input type="text" id="username" name="username" placeholder="Type username...">
+                            <p style="font-size: 14px; color: rgb(126, 206, 4);">This username is available</p>
+                        </div>
+                        <br>
+                        <div class="status">
+                            <label><b>Are you a member?</b></label>
+                            <br>
+                            <input type="radio" name="status" id="yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="status" id="no">
+                            <label for="no">No</label>
+                        </div>
+                        <br>
+                        <div class="email">
+                            <label for="email"><b>Email</b></label>
+                            <br>
+                            <input type="email" id="email" name="email" placeholder="Type email here...">
+                            <p style="font-size: 14px; color: rgb(161, 29, 5);">This email is invalid</p>
+                        </div>
+                        <div class="textarea">
+                            <label for="textarea"><b>Message</b></label>
+                            <textarea name="message" style="width:712px; height:200px; border-radius: 5px;" placeholder="Message content...">
+                            </textarea>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="tac" id="tac">
+                            <label for="tac"><b>I agree to the terms and conditions</b></label>
+                        </div>
+                        <br>
+                        <div class="buttons">
+                            <button type="submit" class="submit"><b>Submit</b></button>
+                            <button type="reset" class="reset"><b>Reset Form</b></button>
+                            <button type="cancel" class="cancel"><b>Cancel</b></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>&#169 2023 - CS2350 - All Rights Reserved</footer>
+</body>
+</html>

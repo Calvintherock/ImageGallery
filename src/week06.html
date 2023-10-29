@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            flex-flow: row nowrap;
+            list-style: none;
+        }
+
+        nav ul li{
+            padding-right: .5rem;
+            /*flex-basis: 100px; space the child elements 100px from each other*/
+        }
+
+        .training{
+            flex-grow: 1;
+        }
+
+        nav ul li:nth-child(3){ /*targeting projects*/
+            flex-grow: 1;/*space between item 3 projects*/
+        }
+
+        .cards {
+            display: flex;
+            /*align-items: flex-end or flex start will align the boxes at the bottom or the top height.*/
+            /*justify-content: space-between; gonna separate the boxes from each other but not leave space for the left and right sides of webpage*/
+            justify-content: space-around; /*this the one u want*/
+        }
+
+        .card {
+            width: 30%;
+            padding:.5rem;
+            border: 1px solid red;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li class="training">Training</li>
+            <li class="projects">Projects</li>
+            <li>About</li>
+            <li>Login</li>
+        </ul>
+    </nav>
+
+    <div class="cards" style="display: flex">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis aliquam neque, libero harum, facere amet omnis ratione nemo dolor quo eius consequuntur esse repellendus tenetur! Voluptatibus officiis nostrum ea culpa.</p>
+
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ratione excepturi provident animi id ea reiciendis autem expedita quam, maiores facilis quidem nisi amet veniam exercitationem deserunt mollitia consectetur vel!
+            Aliquid voluptatem cupiditate possimus ducimus perspiciatis. Veritatis accusamus accusantium, facere amet aliquam quibusdam nobis dolorem sequi molestiae obcaecati laborum quam ipsam excepturi perferendis reiciendis, omnis doloremque! Quod accusamus consectetur hic?</p>
+
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum similique, repudiandae iure earum aperiam aliquam quis ad nisi mollitia a minima exercitationem! Quisquam ut aliquam praesentium ad nostrum libero cumque.</p>
+
+        </div>
+    </div>
+    
+</body>
+</html>

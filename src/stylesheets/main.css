@@ -1,3 +1,29 @@
 /* Your styles go here */
 @import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("bootstrap-icons/font/bootstrap-icons.css");
+
+
+div.video {
+    background-color: gray;
+    border: 2px solid grey;
+    padding: 1rem;
+    width: 60%;
+    margin: 1rem auto;
+}
+
+video {
+    width: 100%; /*makes it responsive*/
+    flex: 1;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.field > input [type="text"], [type="number"], [type="password"], [type="date"], [type="email"] {
+    border: 1px solid skyblue;
+    border-radius: 8px;
+    width: 100%;
+
+}

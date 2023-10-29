@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+
+    body {
+        margin: 0 0 0 0;
+    }
+
+    nav {
+        background: rgb(180, 178, 178);
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+
+    .selected {
+        color: Black;
+    }
+
+    nav ol li, a:link {
+        margin: 0 0 0 0;
+        list-style: none;
+        display: inline;
+        margin-right: 10px; 
+        color: rgb(195, 130, 10);
+        
+    }
+
+    a:link { text-decoration: none; }
+
+
+    a:visited { text-decoration: none; }
+
+
+    a:hover { text-decoration: none; }
+
+
+    a:active { text-decoration: none; }
+
+    .shiftright {
+        text-align: right;
+        display: inline;
+        margin-left: 880px;
+    }
+
+    html {
+            background: rgb(255, 255, 255);
+        }
+
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    main h1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    main > p {
+        text-align: wrap;
+        color: gray
+    }
+
+    main > h2 {
+        padding-bottom: 20px;
+    }
+
+    .pull-right {
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    clear: both;
+}
+
+.aside-video {
+    width: 50%;
+    padding: 1rem;
+}
+
+.yt-embed{
+    position: relative;
+    padding-bottom: 55.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.yt-embed iframe {
+    position: absolute;
+    border: 0;
+    top: 0;
+    left: 0;
+    
+}
+
+.jumbotron {
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    background-position: bottom right;
+    padding: 1rem;
+}
+
+    button {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        display: inline;
+        color: black;
+        background: orange;
+        font-size: 24;
+        width: 150px;
+        height: 50px;
+        border-radius: 5px;
+        border-color: orange;
+    }
+
+    .column {
+        float: left;
+        width: 30%;
+        background: white;
+        color: gray;
+        height: 300px;
+        border: gray;
+        border-style: solid;
+        border-width: 2px;
+        margin: 0px 30px 0px 10px;
+    }
+
+    .column img {
+        height: 100px;
+        width: 300px;
+    }
+    .column2 {
+        float: left;
+        width: 30%;
+        background: white;
+        color: gray;
+        height: 300px;
+        border: gray;
+        border-style: solid;
+        border-width: 2px;
+        margin: 0px 30px 0px 0px;
+    }
+
+    .column3 {
+        float: left;
+        display: inline;
+        width: 30%;
+        background: white;
+        color: gray;
+        height: 282px;
+        border: gray;
+        border-style: solid;
+        border-width: 2px;
+        margin: 0px 10px 0px 0px;
+        padding-bottom: 18px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    header button {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        display: inline;
+        color: black;
+        background: orange;
+        font-size: 24;
+        width: 150px;
+        height: 50px;
+        border-radius: 5px;
+        border-color: orange;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        display: inline;
+        background: rgb(66, 66, 66);
+        list-style: none;
+    }
+
+    footer > li >{
+        display: block;
+        color: rgb(135, 51, 6);
+        padding-bottom: 8px;
+    }
+
+    footer > h3 {
+        display: block;
+        color: white;
+        padding-top: 15px;
+    }
+
+    .columm {
+        margin-left: 15px;
+        float: left;
+        width: 24%;
+        background: gray;
+        color: white;
+        padding-left: 10px;
+        margin-left: 0;
+        padding-bottom: 20px;
+    }
+    .columm2 {
+        float: left;
+        width: 24%;
+        background: gray;
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    .columm3 {
+        float: left;
+        width: 25%;
+        background: gray;
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    .columm4 {
+        float: left;
+        width: 25%;
+        background: gray;
+        color: white;
+        margin-right: 0;
+        padding-bottom: 20px;
+    }
+/* Clear floats after the columns */
+    .roww:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    ul li {
+        display: inline;
+        list-style: none;
+        color: rgb(215, 112, 9);
+    }
+
+    ul {
+        margin-left: 230px;
+    }
+
+    .shiftlessright {
+        float: right;
+    }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ol>
+            <li style="color: gray"><b>Utah Mighty </li></b>
+            <li style="color: black"><b>FIVE</b></li>
+            <li><a href= "One">One</a></li>
+            <li><a href="Two">Two<a><li>
+            <li><a href= "Three">Three</a></li>
+            <li><a href= "Four">Four</a></li>
+            <li><a href= "Five">Five</a></li>
+            <div class="shiftright">
+            <li><b><a href= "Account">Account</a></b></li>
+            <li><b><a href= "Login">Login</a></b></li>
+        </div>
+        </ol>
+    <hr>
+    </nav>
+    <main>
+
+        <div class="jumbotron clearfix">
+            <div class="pull-right aside-video">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed?v=_hoGpYyn4Bs" title ="Youtube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pictore-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
+            </iframe>
+            </div>
+        </div>
+        <h1><b>Close Your Eyes and Open Your Mind</b></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum nam animi quam earum quae laborum est magni, amet tempore temporibus incidunt laboriosam aut distinctio tempora consectetur suscipit maiores consequatur doloribus!
+        </p>
+        <button><b>Take a Tour</b></button>
+        <button><b>Start a Free Trial</b></button>
+        <hr>
+
+        <h2><b>What are they?</b></h2>
+
+        <div class="row">
+            <div class="column">
+                <img source="https://cdn.pixabay.com/photo/2016/10/24/22/43/dubai-1767540_1280.jpg" alt="California Redwoods">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eius libero expedita sapiente, possimus velit dicta et quia a aut, porro voluptate maxime corrupti ducimus veniam, reiciendis quos maiores asperiores.</p>
+            </div>
+            <div class="column2">
+                <img source="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80" alt="Grand Canyon">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos qui eos molestias quae tempore excepturi delectus. Perspiciatis esse natus, inventore quasi rem, voluptatem atque excepturi minima labore, quos sed dignissimos!
+                </p>
+            </div>
+            <div class="column3">
+                <img source="https://images.unsplash.com/photo-1529439322271-42931c09bce1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Yellowstone">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis laborum porro, eius reprehenderit fugiat obcaecati ipsam? At sunt voluptates excepturi ad cumque, laborum officia voluptas praesentium sequi iusto, distinctio voluptate?
+                </p>
+            </div>
+        </div>
+        <header>
+            <button><b>Remaining Two</b></button>
+        </header>
+        </main>
+
+        <footer>
+            <div class="roww">
+                <div class="columm">
+                    <h3><b>Offices</b></h3>
+                    <li><a href="One">&nbsp;&nbsp;One</a></li>
+                    <li><a href="Two">&nbsp;&nbsp;Two</a></li>
+                    <li><a href="Three">&nbsp;&nbsp;Three</a></li>
+                    <li><a href="Four">&nbsp;&nbsp;Four</a></li>
+                </div>
+
+                <div class="columm2">
+                    <h3><b>Links</b></h3>
+                    <li><a href="One">&nbsp;&nbsp;One</a></li>
+                    <li><a href="Two">&nbsp;&nbsp;Two</a></li>
+                    <li><a href="Three">&nbsp;&nbsp;Three</a></li>
+                    <li><a href="Four">&nbsp;&nbsp;Four</a></li>
+                </div>
+
+                <div class="columm3">
+                    <h3><b>Contact</b></h3>
+                    <li><a href="Twitter">&nbsp;&nbsp;Twitter</a></li>
+                    <li><a href="Instagram">&nbsp;&nbsp;Instagram</a></li>
+                    <li><a href="Facebook">&nbsp;&nbsp;Facebook</a></li>
+                    <li><a href="Pinterest">&nbsp;&nbsp;Pinterest</a></li>
+                </div>
+
+                <div class="columm4">
+                    <h3><b>Locations</b></h3>
+                    <li><a href="One">&nbsp;&nbsp;One</a></li>
+                    <li><a href="Two">&nbsp;&nbsp;Two</a></li>
+                    <li><a href="Three">&nbsp;&nbsp;Three</a></li>
+                    <li><a href="Four">&nbsp;&nbsp;Four</a></li>
+
+                </div>
+
+
+                </div>
+        </footer>
+
+        <ul>
+            <li><a href="Legal">Legal</a></li>
+            <li><a href="Partner">Partner</a></li>
+            <li><a href="Explore">Explore</a></li>
+            <div class="shiftlessright">
+            <li style="color: black"><b>&#169 All Rights Reserved</b></li>
+        </div>
+        </ul>
+        
+    
+</body>
+</html>

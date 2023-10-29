@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Activity 05</title>
+<style>
+
+    nav {
+        background-color: white;
+    }
+
+    .selected {color: Black; }
+
+    nav ol li, a:link {
+        list-style: none;
+        display: inline;
+        margin-right: 10px; 
+        color: orange;
+    }
+
+    a:visited { text-decoration: rgb(39, 219, 23); }
+
+
+    a:hover { text-decoration: rgb(153, 102, 8); }
+
+
+    a:active { text-decoration: none; }
+
+    .shiftright {
+        text-align: right;
+        display: inline;
+        margin-left: 1050px;
+    }
+
+    img {
+        float: left;
+        padding-top: 30px;
+        padding-right: 5px;
+    }
+
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    main > p {
+        text-align: wrap;
+    }
+
+    main > ul {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .circlethings {
+        width: 100%;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circlething1 {
+        text-align: center;
+        width: 20%;
+        background: black;
+        color: white;
+        border-radius: 100%;
+        border: 75px solid black;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        margin-right: 10px;
+    }
+
+    .circlething2 {
+        text-align: center;
+        width: 20%;
+        background: black;
+        color: white;
+        border-radius: 100%;
+        border: 75px solid black;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        margin-right: 10px;
+    }
+
+    .circlething3 {
+        text-align: center;
+        width: 20%;
+        background: black;
+        color: white;
+        border-radius: 100%;
+        border: 75px solid black;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        margin-right: 10px;
+    }
+
+    .circlething4 {
+        text-align: center;
+        width: 20%;
+        background: black;
+        color: white;
+        border-radius: 100%;
+        border: 75px solid black;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        margin-right: 10px;
+    }
+
+    .circlethings:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        background: gray;
+        color: white;
+        padding-bottom: 92px;
+    }
+    .column2 {
+        float: left;
+        width: 33.33%;
+        background: black;
+        color: white;
+    }
+
+    .column3 {
+        float: left;
+        width: 33.33%;
+        padding-top: 15px;
+        background: gray;
+        color: white;
+        padding-bottom: 109px;
+    }
+/* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    footer {
+        display: inline;
+    }
+
+    footer > h4 {
+        float: left;
+    }
+
+    footer > p {
+        float: right;
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li style="color: black"><b>Floated Menus:</li></b>
+            <li><a href= "One">One</a></li>
+            <li><a href="Two">Two<a><li>
+            <div class="shiftright">
+            <li><a href= "Three">Three</a></li>
+            <li><a href= "Four">Four</a></li>
+        </div>
+        </ol>
+    <hr>
+    </nav>
+    <main>
+        <header>
+            <h1><b><span style ="color: orange;">&#60;Article 1&#62;:</span> Wrapping text around an image</b></h1>
+        </header>
+
+        <img source="https://cdn.pixabay.com/photo/2016/10/24/22/43/dubai-1767540_1280.jpg" alt="Night City">
+        <h2><b>A secondary Heading</b></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum nam animi quam earum quae laborum est magni, amet tempore temporibus incidunt laboriosam aut distinctio tempora consectetur suscipit maiores consequatur doloribus!
+        Cumque assumenda excepturi atque enim quod quas tempora distinctio, doloremque voluptatem ut fuga soluta vel quasi. Dolores fuga omnis, veniam est quaerat at esse id similique temporibus nemo unde sit?
+        Minima, maxime. Fugit tenetur adipisci earum necessitatibus id beatae optio aliquid at dolores? Nisi alias quas sed quod rerum tempore, eaque placeat tempora quo quibusdam aspernatur veritatis aliquam reprehenderit tenetur?</p>
+
+        <header>
+            <h1><b><span style ="color: orange;">&#60;Article 2&#62;:</span> Centering text vertically</b></h1>
+        </header>
+
+        <div class="circlethings">
+            <div class="circlething1">
+                <p><b>Selectors</b></p>
+            </div>
+            <div class="circlething2">
+                <p><b>Inheritance</b></p>
+            </div>
+            <div class="circlething3">
+                <p><b>Cascade</b></p>
+            </div>
+            <div class="circlething4">
+                <p><b>Specificity</b></p>
+            </div>
+        </div>
+        
+        <header>
+            <h1><b><span style ="color: orange;">&#60;Article 3&#62;:</span> Equal-height columns</b></h1>
+        </header>
+
+        <div class="row">
+            <div class="column">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eius libero expedita sapiente, possimus velit dicta et quia a aut, porro voluptate maxime corrupti ducimus veniam, reiciendis quos maiores asperiores.</p>
+            </div>
+            <div class="column2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos qui eos molestias quae tempore excepturi delectus. Perspiciatis esse natus, inventore quasi rem, voluptatem atque excepturi minima labore, quos sed dignissimos!
+                Accusantium perspiciatis cupiditate aliquid qui a eaque ipsa nisi minus dicta magni eius neque exercitationem quas earum pariatur facere inventore deserunt placeat autem doloremque tempora, reiciendis, quisquam corporis odio! Quidem!</p>
+            </div>
+            <div class="column3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis laborum porro, eius reprehenderit fugiat obcaecati ipsam? At sunt voluptates excepturi ad cumque, laborum officia voluptas praesentium sequi iusto, distinctio voluptate?
+            </div>
+        </div>
+
+
+    </main>
+    <hr>
+    <footer>
+        <h4><b>Calvin Grover</b></h4>
+        <p>&#169 All rights reserved</p>
+    </footer>
+</body>
+</html>
