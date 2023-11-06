@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8</title>
+    <style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h2 {
+        padding-top: 45px;
+        padding-left: 20px;
+    }
+
+    .header {
+        padding-top: 20px;
+    }
+
+    .columns {
+        width: 100%;
+    }
+
+    body {
+        height: 1100px;
+    }
+
+    nav {
+        background-color: black;
+    }
+    /*makes image responsive*/
+    .img-fluid1 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        min-height: 100%;
+    }
+    
+    /*mobile media*/
+    @media (max-width: 767.98px) {
+        nav {
+            width: 100%
+        }
+
+        h1 {
+            padding-left: 10px;
+        }
+
+        .header {
+            font-size: 20px;
+        }
+
+        .img {
+            max-width: 500px;
+            max-height: 300px;
+            padding: 5px;
+        }
+        
+        .img2 {
+            max-width: 150px;
+            min-width: 150px;
+            height: 150px;
+            min-height: 100%;
+            object-fit: contain;
+            overflow: hidden;
+            z-index: 1;
+            padding: 5px;
+            display: inline-block;
+            /*inline flex not used because it changes size of images*/
+        }
+        }
+    
+    /*large media*/
+    @media (min-width: 768px) {
+        nav {
+            display: flex;
+            width: 100%;
+        }
+
+        h1 {
+            padding-left: 30px;
+        }
+
+        .img {
+            max-width: 800px;
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .text {
+            width: 800px;
+            font-size: 14px;
+    }
+
+        .img2 {
+            max-width: 170px;
+            height: 170px;
+            min-height: 100%;
+            object-fit: contain;
+            overflow: hidden;
+            z-index: 1;
+            padding: 10px;
+            display: inline-block;
+            /*inline flex not used because it changes size of images*/
+        }
+        .columns {
+            width: 100%;
+            float: left;
+            display: flex;
+        }
+
+        .colleft {
+            width: 60%;
+            position: left;
+            display: flex;
+        }
+
+        .colright {
+            padding-top: 30px;
+            width: 40%;
+            position: right;
+        }
+    }
+
+
+
+
+    @media (max-width: 1500px) {
+        .img2 {
+            display: i;
+        }
+    }
+
+
+    /*make paragraph responsive*/
+    @media (max-width: 900px) {
+        .text {
+            max-width: 100%;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 style="color: white; font-size: 50px;">Calvin Grover</h1>
+        <h2 style="color: rgb(30, 130, 192)">Gallery</h2>
+    </nav>
+
+    <div class="columns">
+
+        <div class="colleft">
+            <div class="row">
+                <div class="img"><img src="./images/Snowboard1.jpg" class="img-fluid1" alt=""></div>
+                <div class="header"><h2>Snowboarding</h2></div>
+                <div class="text"><p>The art of snowboarding requires the use of a combonation of skills. Snowboarders primarily rely on balance to keep a steady pace down a mountain. Another important skill that might sound bogus, is the art of falling down properly. If you seem to lose grasp of balance and decide to fall down, it is better to fall backwards onto your back, than it is to use your hands to catch your fall. Falling onto your frontside is where most arm, wrist, chest, shoulder, and even head infuries come into play with winter sports like these. Other skills required to snowboard might include good eyesight, a tolerance to cold weather, a good sense of speed, slowing down properly, being courteous to other skiiers and snowboarders, and most importantly, wearing a helmet and having fun!</p></div>
+
+            </div>
+        </div>
+        
+        <div class="colright">
+            <div class="row2">
+                <div class="img2"><img src="./images/Snowboard10.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard2.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard3.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard4.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard5.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard6.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard7.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard8.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard9.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard11.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard12.jpg" class="img-fluid" alt=""></div>
+                <div class="img2"><img src="./images/Snowboard13.jpg" class="img-fluid" alt=""></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
